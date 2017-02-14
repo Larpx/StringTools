@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Algorithm
+namespace Larpx.Algorithm
 {
     public class BigInteger
     {

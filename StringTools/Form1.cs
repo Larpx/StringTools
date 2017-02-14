@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Larpx.CommonLibrary;
 
-namespace StringTools
+namespace Larpx.StringTools
 {
     public partial class FormMain : Form
     {
@@ -120,6 +117,50 @@ namespace StringTools
         private void richTextBox_Source_TextChanged( object sender, EventArgs e )
         {
 
+        }
+
+        /// <summary>
+        /// 切换tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tabControl_Main_Selected( object sender, TabControlEventArgs e )
+        {
+            switch( e.TabPageIndex )
+            {
+            case (int)CommClass.MainTabIndex.StringTool:
+
+                break;
+            case (int)CommClass.MainTabIndex.SQLTools:
+
+                break;
+            case (int)CommClass.MainTabIndex.QRCodeTools:
+
+                break;
+            case (int)CommClass.MainTabIndex.AboutInfo:
+
+                break;
+            }
+        }
+
+        private void QRCode_Done_Click( object sender, EventArgs e )
+        {
+            try
+            {
+                Bitmap bp;
+                label7.Text = "";
+                if( !String.IsNullOrEmpty( QR_textBox_Memo.Text ) )
+                {
+                    //bp = QRCode.GetCode( QR_textBox_Memo.Text, QRCode.ENCODE_MODE.BYTE, QRCode.ERROR_CORRECTION.HIGH, 0, 4 );
+
+                   bp = QRCode.GetCode( QR_textBox_Memo.Text, QRCode.ErrorCorrectionLevel.HIGH, QRCode.BarcodeFormat.QR_CODE,300,300 );
+                    QR_pictureBox_QRCode.Image = bp;
+                }
+            }
+            catch( Exception ex )
+            {
+                label7.Text = ex.Message;
+            }
         }
     }
 }

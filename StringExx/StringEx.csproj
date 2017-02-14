@@ -7,7 +7,7 @@
     <ProjectGuid>{254B8819-ADEB-477F-B49F-DF30BE4DE751}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StringExx</RootNamespace>
+    <RootNamespace>Larpx.StringExx</RootNamespace>
     <AssemblyName>StringExx</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

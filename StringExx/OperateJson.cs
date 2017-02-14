@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StringExx
+namespace Larpx.StringExx
 {
     public class OperateJson : BaseAction, BaseInterface
     {

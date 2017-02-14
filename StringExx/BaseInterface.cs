@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StringExx
+namespace Larpx.StringExx
 {
     public interface BaseInterface
     {
