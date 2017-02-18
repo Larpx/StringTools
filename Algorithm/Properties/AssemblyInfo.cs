@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Algorithm")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany( "Larpx" )]
 [assembly: AssemblyProduct("Algorithm")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright( "Copyright © Larpx 2017" )]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

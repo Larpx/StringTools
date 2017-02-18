@@ -22,7 +22,6 @@ namespace Larpx.CommonLibrary
             {
                 if( String.IsNullOrEmpty( str ) )
                     throw new Exception( "字符串为空" );
-
                 //初始化二维码生成工具
                 QRCodeEncoder qrCodeEncoder = new QRCodeEncoder();
                 qrCodeEncoder.QRCodeEncodeMode = (QRCodeEncoder.ENCODE_MODE)em;
@@ -32,7 +31,6 @@ namespace Larpx.CommonLibrary
 
                 //将字符串生成二维码图片
                 Bitmap image = qrCodeEncoder.Encode( str, Encoding.UTF8 );
-                
                 return image;
             }
             catch( Exception ex )
@@ -53,14 +51,14 @@ namespace Larpx.CommonLibrary
             {
                 if( String.IsNullOrEmpty( str ) )
                     throw new Exception( "字符串为空" );
-                
+
                 ZXing.QrCode.QrCodeEncodingOptions qrEncodeOption = new ZXing.QrCode.QrCodeEncodingOptions();
                 qrEncodeOption.CharacterSet = "UTF-8";
                 qrEncodeOption.DisableECI = true; // Extended Channel Interpretation (ECI) 主要用于特殊的字符集。并不是所有的扫描器都支持这种编码。
                 qrEncodeOption.Height = nHeight;
                 qrEncodeOption.Width = nWidth;
                 qrEncodeOption.Margin = nMargin;
-                switch(ec)
+                switch( ec )
                 {
                 case ErrorCorrectionLevel.HIGH:
                     qrEncodeOption.ErrorCorrection = ZXing.QrCode.Internal.ErrorCorrectionLevel.H; // 纠错级别
@@ -75,7 +73,7 @@ namespace Larpx.CommonLibrary
                     qrEncodeOption.ErrorCorrection = ZXing.QrCode.Internal.ErrorCorrectionLevel.Q; // 纠错级别
                     break;
                 }
-                
+
                 BarcodeWriter writer = new BarcodeWriter();
                 writer.Format = (ZXing.BarcodeFormat)bfType;
                 writer.Options = qrEncodeOption;
@@ -92,7 +90,6 @@ namespace Larpx.CommonLibrary
                 throw ex;
             }
         }
-
 
         #region 枚举类型
 

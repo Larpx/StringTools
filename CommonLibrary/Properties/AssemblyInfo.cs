@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CommonLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany( "Larpx" )]
 [assembly: AssemblyProduct("CommonLibrary")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright( "Copyright © Larpx 2017" )]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
