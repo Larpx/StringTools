@@ -3,30 +3,60 @@
 namespace Larpx.StringExx
 {
     public interface BaseInterface
-    {
-        //转换为字符串
-        object ToString();
+    {             
+        /// <summary>
+        /// 转换为字符串
+        /// </summary>
+        /// <returns></returns>
+        object ToString( String str );
 
-        //格式化
-        object Format();
+        /// <summary>
+        /// 格式化
+        /// </summary>
+        /// <returns></returns>
+        object Format( String str );
 
-        //压缩
-        object Compress();
+        /// <summary>
+        /// 压缩
+        /// </summary>
+        /// <returns></returns>
+        object Compress( String str );
 
-        //转义
-        object Escape();
+        /// <summary>
+        /// 转义
+        /// </summary>
+        /// <returns></returns>
+        object Escape( String str );
 
-        //校验
-        object Check();
+        /// <summary>
+        /// 校验
+        /// </summary>
+        /// <returns></returns>
+        bool Check( String str );
 
-        //转换
-        object Convert();
+        /// <summary>
+        /// 转换
+        /// </summary>
+        /// <returns></returns>
+        object Convert( String str );
 
-        String ToXML();
+        /// <summary>
+        /// 转为XML
+        /// </summary>
+        /// <returns></returns>
+        String ToXML( String str );
 
-        String ToJson();
+        /// <summary>
+        /// 转为Json
+        /// </summary>
+        /// <returns></returns>
+        String ToJson( String str );
 
-        String ToURL();
+        /// <summary>
+        /// 转为URL
+        /// </summary>
+        /// <returns></returns>
+        String ToURL( String str );
 
     }
 }
