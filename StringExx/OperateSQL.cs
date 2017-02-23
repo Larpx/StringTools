@@ -8,27 +8,27 @@ namespace Larpx.StringExx
 {
     public class OperateSQL : BaseAction, BaseInterface
     {
-        public object Check()
+        public bool Check()
         {
             throw new NotImplementedException();
         }
 
-        public object Compress()
+        public string Compress()
         {
             throw new NotImplementedException();
         }
 
-        public object Convert()
+        public string Convert( object obj )
         {
             throw new NotImplementedException();
         }
 
-        public object Escape()
+        public string Escape()
         {
             throw new NotImplementedException();
         }
 
-        public object Format()
+        public string Format()
         {
             throw new NotImplementedException();
         }
@@ -44,11 +44,6 @@ namespace Larpx.StringExx
         }
 
         public string ToXML()
-        {
-            throw new NotImplementedException();
-        }
-
-        object BaseInterface.ToString()
         {
             throw new NotImplementedException();
         }

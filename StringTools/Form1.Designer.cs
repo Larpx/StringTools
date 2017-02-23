@@ -56,6 +56,7 @@
             this.tabPage_QRCode = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.QR_pictureBox_QRCode = new System.Windows.Forms.PictureBox();
             this.QR_textBox_Scale = new System.Windows.Forms.TextBox();
             this.QR_comboBox_type = new System.Windows.Forms.ComboBox();
@@ -82,7 +83,7 @@
             this.saveFileDialog_File = new System.Windows.Forms.SaveFileDialog();
             this.fileSystemWatcher_File = new System.IO.FileSystemWatcher();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label7 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl_Main.SuspendLayout();
             this.tabPage_StringTools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_FileLR)).BeginInit();
@@ -168,6 +169,7 @@
             this.groupBox_Operate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox_Operate.Controls.Add(this.button5);
             this.groupBox_Operate.Controls.Add(this.radioButton_StringTypeXML);
             this.groupBox_Operate.Controls.Add(this.radioButton_StringTypeJson);
             this.groupBox_Operate.Controls.Add(this.radioButton_StringTypeStrings);
@@ -494,6 +496,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "条码";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 382);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "label7";
+            // 
             // QR_pictureBox_QRCode
             // 
             this.QR_pictureBox_QRCode.Location = new System.Drawing.Point(3, 46);
@@ -687,14 +698,15 @@
             this.fileSystemWatcher_File.EnableRaisingEvents = true;
             this.fileSystemWatcher_File.SynchronizingObject = this;
             // 
-            // label7
+            // button5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 382);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 12);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "label7";
+            this.button5.Location = new System.Drawing.Point(18, 346);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Test";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // FormMain
             // 
@@ -806,6 +818,7 @@
         private System.Windows.Forms.ComboBox QR_comboBox_Mode;
         private System.Windows.Forms.Button QRCode_Done;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button5;
     }
 }
 

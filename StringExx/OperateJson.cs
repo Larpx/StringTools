@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace Larpx.StringExx
@@ -48,17 +45,21 @@ namespace Larpx.StringExx
             }
         }
 
-        public object ToString( string str )
+
+
+        public new String ToString()
         {
             return _strJson;
         }
 
+        #region 实现接口
+
         /// <summary>
-        /// 
+        /// 格式化字符串
         /// </summary>
         /// <param name="str"></param>
-        /// <returns></returns>
-        public object Format( string str )
+        /// <returns>返回经过格式化的字符串</returns>
+        public String Format()
         {
             if( String.IsNullOrEmpty( _strJson ) )
                 return null;
@@ -85,44 +86,66 @@ namespace Larpx.StringExx
             }
             catch( Exception ex )
             {
-                throw ex;
+                return ex.Message;
+            }
+
+            return tmp;
+        }
+
+        public String Compress()
+        {
+            throw new NotImplementedException();
+        }
+
+        public String Escape()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Check()
+        {
+
+            return false;
+        }
+
+        /// <summary>
+        /// 将对象转换为Json并且格式化
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public String Convert( object obj )
+        {
+            if( obj == null )
+                return null;
+            String tmp = String.Empty;
+            try
+            {
+                _strJson = JsonConvert.SerializeObject( obj );
+                tmp = this.Format();
+            }
+            catch( Exception ex )
+            {
+                return ex.Message;
             }
             return tmp;
         }
 
-        public object Compress( string str )
+        public String ToXML()
         {
             throw new NotImplementedException();
         }
 
-        public object Escape( string str )
+        public String ToJson()
         {
             throw new NotImplementedException();
         }
 
-        public bool Check( string str )
+        public String ToURL()
         {
             throw new NotImplementedException();
         }
 
-        public object Convert( string str )
-        {
-            throw new NotImplementedException();
-        }
-
-        public string ToXML( string str )
-        {
-            throw new NotImplementedException();
-        }
-
-        public string ToJson( string str )
-        {
-            throw new NotImplementedException();
-        }
-
-        public string ToURL( string str )
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
     }
+
 }

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Larpx.CommonLibrary;
+using Larpx.StringExx;
 
 namespace Larpx.StringTools
 {
@@ -153,13 +154,31 @@ namespace Larpx.StringTools
                 {
                     //bp = QRCode.GetCode( QR_textBox_Memo.Text, QRCode.ENCODE_MODE.BYTE, QRCode.ERROR_CORRECTION.HIGH, 0, 4 );
 
-                   bp = QRCode.GetCode( QR_textBox_Memo.Text, QRCode.ErrorCorrectionLevel.HIGH, QRCode.BarcodeFormat.QR_CODE,300,300 );
+                    bp = QRCode.GetCode( QR_textBox_Memo.Text, QRCode.ErrorCorrectionLevel.HIGH, QRCode.BarcodeFormat.QR_CODE, 300, 300 );
                     QR_pictureBox_QRCode.Image = bp;
                 }
             }
             catch( Exception ex )
             {
                 label7.Text = ex.Message;
+            }
+        }
+
+        private void button5_Click( object sender, EventArgs e )
+        {
+            if( String.IsNullOrEmpty( richTextBox_Source.Text.Trim() ) )
+            {
+                MessageBox.Show( "空" );
+            }
+            try
+            {
+                OperateJson oj = new OperateJson();
+                oj.strJson = richTextBox_Source.Text.Trim();
+                richTextBox_Result.Text = oj.Format().ToString();
+            }
+            catch( Exception ex )
+            {
+                richTextBox_Result.Text = ex.Message;
             }
         }
     }
